@@ -23,7 +23,7 @@ public class Playercontroller2d : MonoBehaviour
         move.x = Input.GetAxis("Horizontal");
         move.y = Input.GetAxis("Vertical");
 
-        rb.AddForce(move * speed);
+        rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
     }
 
     void Update()
